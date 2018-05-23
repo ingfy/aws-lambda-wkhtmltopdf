@@ -1,0 +1,12 @@
+<html><body>
+<table style="border-bottom: 1px solid black; width: 100%"></table>
+<script>
+var table = document.querySelector('table');
+var query = document.location.search.substring(1).split('&');
+for (var key in query) {
+    var kv = query[key].split('=', 2);
+
+    table.insertAdjacentHTML('beforeend', '<tr><th>' + kv[0] + '</th><td>' + kv.slice(1).join('=') + '</td></tr>');
+}
+</script>
+</body></html>
