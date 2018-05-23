@@ -50,3 +50,16 @@ There are many options available to [wkhtmltopdf](http://wkhtmltopdf.org/docs.ht
     }
 }
 ```
+
+## Running the tests
+
+Remember to make `wkhtmltopdf` executable:
+
+`chmod +x wkhtmltopdf`
+
+Then run the tests:
+
+`PATH=$PATH:$(pwd) node test/test.js`
+
+This command will produce output PDFs in `./test/out`. These need to be
+verified manually.
